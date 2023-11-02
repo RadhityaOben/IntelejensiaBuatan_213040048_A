@@ -16,12 +16,16 @@ public class MainProgramGBFS {
         kings.addTetangga(btc);
         kings.addTetangga(tsm);
         kings.addTetangga(pvj);
+        tsm.addTetangga(btc);
+        tsm.addTetangga(kings);
         ip.addTetangga(pvj);
         ip.addTetangga(tsm);
+        pvj.addTetangga(ciwalk);
+        pvj.addTetangga(ip);
+        pvj.addTetangga(kings);
         ciwalk.addTetangga(fcl);
 
         GreedyBestFirstSearch gbfs = new GreedyBestFirstSearch();
         gbfs.search(btc, ciwalk);
-        gbfs.printPath();
     }
 }

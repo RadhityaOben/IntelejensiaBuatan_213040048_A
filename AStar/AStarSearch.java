@@ -32,6 +32,7 @@ public class AStarSearch {
 
             for (Node neighbor : current.getTetangga()) {
                 if (closedSet.contains(neighbor)) {
+                    System.out.println(neighbor.getNama() + " dikunjungi");
                     continue;
                 }
 

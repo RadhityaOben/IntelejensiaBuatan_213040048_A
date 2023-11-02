@@ -16,8 +16,13 @@ class MainProgramAstar {
         kings.addTetangga(btc);
         kings.addTetangga(tsm);
         kings.addTetangga(pvj);
+        tsm.addTetangga(btc);
+        tsm.addTetangga(kings);
         ip.addTetangga(pvj);
         ip.addTetangga(tsm);
+        pvj.addTetangga(ciwalk);
+        pvj.addTetangga(ip);
+        pvj.addTetangga(kings);
         ciwalk.addTetangga(fcl);
 
         // Membuat objek AStarSearch
@@ -25,7 +30,6 @@ class MainProgramAstar {
 
         // Menjalankan algoritma A* untuk mencari rute dari bandung ke Medan
         astar.search(btc, ciwalk);
-        astar.printPath(kings);
     }
 }
 
